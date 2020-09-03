@@ -1,0 +1,12 @@
+<input type='number' placeholder='Edad Uno' [(ngModel)]="edadUno"><br>
+<input type='number'  placeholder='Edad Dos' [(ngModel)]="edadDos"><br>
+<label>La suma es = {{suma}} </label><br>
+<label>El promedio es = {{promedio}} </label><br>
+<button (click)='calcular()'>calcular</button><br>
+<button (click)='limpiar()'>limpiar cuadros de textos</button><br>
+
+<div class="login-container">
+    <input type="text" placeholder="Nombre" [(ngModel)]="usuario.nombre">
+    <input type="password" placeholder="Clave" [(ngModel)]="usuario.clave">
+    <input type="button" value="Login" (click)="submitLogin()">
+</div>

@@ -1,0 +1,10 @@
+.error-container {
+    position: relative;
+    width: 20vw;
+    height: 10vh;
+    background: red;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
