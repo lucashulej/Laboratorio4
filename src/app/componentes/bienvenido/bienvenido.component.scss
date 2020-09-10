@@ -1,7 +1,11 @@
 .bienvenido-container {
+    position: relative;
     width: 50vw;
     height: 50vh;
-    top: 25%;
-    left: 25%;
-    background: red;
+    top: 25vh;
+    left: 25vw;
+    background: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

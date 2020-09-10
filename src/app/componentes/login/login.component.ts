@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from 'src/app/clases/usuario';
 import { stringify } from '@angular/compiler/src/util';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +19,7 @@ export class LoginComponent implements OnInit {
 
   usuario: Usuario = new Usuario();
   error : boolean = false;
-  constructor() {}
+  constructor(private router : Router) {}
 
   ngOnInit(): void {}
 
@@ -28,11 +29,11 @@ export class LoginComponent implements OnInit {
   }
 
   submitLogin() {
-    if(this.usuario.nombre === "lucas" && this.usuario.clave === "123456") {
-
+    if(this.usuario.nombre === "admin" && this.usuario.clave === "123456") {
+      this.router.navigate(['/bienvenido']);
     }
     else {
-      this.error = true;
+      this.router.navigate(['/error']);
     }
   }
 
