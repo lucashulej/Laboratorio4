@@ -10,6 +10,8 @@ import { BienvenidoComponent } from './componentes/bienvenido/bienvenido.compone
 import { ControlEntidadComponent } from './componentes/control-entidad/control-entidad.component';
 import { HttpClientModule } from "@angular/common/http";
 import { ListadoEntidadComponent } from './componentes/listado-entidad/listado-entidad.component';
+import { DetalleEntidadComponent } from './componentes/detalle-entidad/detalle-entidad.component';
+import { BotonEntidadComponent } from './componentes/boton-entidad/boton-entidad.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { ListadoEntidadComponent } from './componentes/listado-entidad/listado-e
     ErrorComponent,
     BienvenidoComponent,
     ControlEntidadComponent,
-    ListadoEntidadComponent
+    ListadoEntidadComponent,
+    DetalleEntidadComponent,
+    BotonEntidadComponent
   ],
   imports: [
     BrowserModule,

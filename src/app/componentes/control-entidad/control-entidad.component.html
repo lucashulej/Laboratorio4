@@ -1,1 +1,2 @@
-<app-listado-entidad [listado]='listadoPadre'></app-listado-entidad>
+<app-listado-entidad [listado]="listadoPadre" (emitirUsuario)="tomarUsuarioParaDetalle($event)"></app-listado-entidad>
+<app-detalle-entidad [usuario]='usuarioParaDetalle'></app-detalle-entidad>

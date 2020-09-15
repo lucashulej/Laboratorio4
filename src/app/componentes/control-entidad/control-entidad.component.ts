@@ -8,7 +8,7 @@ import { ApiService } from 'src/app/servicios/api.service';
 export class ControlEntidadComponent implements OnInit {
 
   listadoPadre: [];
-
+  usuarioParaDetalle;
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
@@ -18,5 +18,8 @@ export class ControlEntidadComponent implements OnInit {
     });
   }
 
+  tomarUsuarioParaDetalle(usuario) {
+    this.usuarioParaDetalle = usuario;
+  }
  
 }
