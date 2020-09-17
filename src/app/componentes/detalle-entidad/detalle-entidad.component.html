@@ -22,5 +22,5 @@
             </tr>
         </tbody>
     </table>
-    <app-boton-entidad [entidad]="usuario"></app-boton-entidad>
+    <app-boton-entidad [entidad]="usuario"  (emitirBorrarUsuario)="tomarUsuarioParaBorrar($event)"></app-boton-entidad>
 </div>

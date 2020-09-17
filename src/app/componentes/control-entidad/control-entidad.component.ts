@@ -7,8 +7,9 @@ import { ApiService } from 'src/app/servicios/api.service';
 })
 export class ControlEntidadComponent implements OnInit {
 
-  listadoPadre: [];
-  usuarioParaDetalle;
+  listadoPadre = new Array();
+  listadoPadreBorrado = new Array();
+  usuarioParaDetalle:any;
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
@@ -20,6 +21,14 @@ export class ControlEntidadComponent implements OnInit {
 
   tomarUsuarioParaDetalle(usuario) {
     this.usuarioParaDetalle = usuario;
+  }
+
+  tomarUsuarioParaBorrar(usuario) {
+    this.listadoPadre = this.listadoPadre.filter(usuarioAux => usuarioAux != usuario);
+    if(!this.listadoPadreBorrado.includes(usuario)) {
+      this.listadoPadreBorrado.push(usuario);
+    }
+    console.log(this.listadoPadreBorrado);
   }
  
 }

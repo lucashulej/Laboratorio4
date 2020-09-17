@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-boton-entidad',
@@ -8,13 +8,14 @@ import { Component, Input, OnInit } from '@angular/core';
 export class BotonEntidadComponent implements OnInit {
 
   @Input() entidad;
-
+  @Output() emitirBorrarUsuario: EventEmitter<any> = new EventEmitter();
+  
   constructor() { }
 
   ngOnInit(): void {
   }
 
   borrarEntidad() {
-    //borra entidad
+    this.emitirBorrarUsuario.emit(this.entidad);
   }
 }

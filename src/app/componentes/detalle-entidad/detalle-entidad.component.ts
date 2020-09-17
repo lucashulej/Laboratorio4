@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-detalle-entidad',
@@ -8,8 +8,13 @@ import { Component, Input, OnInit } from '@angular/core';
 export class DetalleEntidadComponent implements OnInit {
 
   @Input() usuario;
+  @Output() emitirBorrarUsuario: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {}
+
+  tomarUsuarioParaBorrar(usuario) {
+    this.emitirBorrarUsuario.emit(usuario);
+  }
 }

@@ -1,2 +1,3 @@
 <app-listado-entidad [listado]="listadoPadre" (emitirUsuario)="tomarUsuarioParaDetalle($event)"></app-listado-entidad>
-<app-detalle-entidad [usuario]='usuarioParaDetalle'></app-detalle-entidad>
+<app-detalle-entidad [usuario]='usuarioParaDetalle' (emitirBorrarUsuario)="tomarUsuarioParaBorrar($event)"></app-detalle-entidad>
+<app-listado-entidad [listado]="listadoPadreBorrado"></app-listado-entidad>
