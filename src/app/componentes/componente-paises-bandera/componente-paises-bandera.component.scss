@@ -1,0 +1,12 @@
+td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+tbody {
+    //height: 90vh;
+    //width: 100vw;
+
+    height: max-content;
+    overflow-y: scroll;
+}

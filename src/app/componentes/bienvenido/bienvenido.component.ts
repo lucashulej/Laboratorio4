@@ -13,7 +13,7 @@ export class BienvenidoComponent implements OnInit {
   }
 
   navigate() {
-    this.router.navigate(['entidad/listado']);
+    this.router.navigate(['entidad/principal']);
   }
 
 }
