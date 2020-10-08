@@ -8,4 +8,5 @@ export class Actor {
     fechaDeNacimiento:string;
     foto:string;
     nacionalidad:string;
+    activo:boolean = true;
 }
