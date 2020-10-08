@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BienvenidoComponent } from 'src/app/componentes/bienvenido/bienvenido.component';
-import { LoginComponent } from 'src/app/componentes/login/login.component';
-import { ErrorComponent } from 'src/app/componentes/error/error.component';
-import { ControlEntidadComponent } from 'src/app/componentes/control-entidad/control-entidad.component';
-import { ComponentePrincipalComponent } from 'src/app/componentes/componente-principal/componente-principal.component';
+import { BusquedaComponent } from 'src/app/componentes/busqueda/busqueda.component';
+import { PeliculaAltaComponent } from 'src/app/componentes/pelicula-alta/pelicula-alta.component';
+import { ActorAltaComponent } from 'src/app/componentes/actor-alta/actor-alta.component';
+import { ActorListadoComponent } from 'src/app/componentes/actor-listado/actor-listado.component';
+import { PeliculaListadoComponent } from 'src/app/componentes/pelicula-listado/pelicula-listado.component';
 
 const routes: Routes = [
-  {path:'', component: LoginComponent},
+  {path: '', redirectTo: '/busqueda', pathMatch: 'full'},
   {path:'bienvenido', component: BienvenidoComponent},
-  //{path:'error', component: ErrorComponent},
-  {path:'entidad/principal', component: ComponentePrincipalComponent}
+  {path:'busqueda', component: BusquedaComponent},
+  {path:'peliculas/altas', component: PeliculaAltaComponent},
+  {path:'actor/alta', component: ActorAltaComponent},
+  {path:'actor/listado', component: ActorListadoComponent},
+  {path:'peliculas/listado', component: PeliculaListadoComponent}
 ];
 
 @NgModule({

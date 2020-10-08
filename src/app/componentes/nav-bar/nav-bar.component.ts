@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 @Component({
-  selector: 'app-bienvenido',
-  templateUrl: './bienvenido.component.html',
-  styleUrls: ['./bienvenido.component.scss']
+  selector: 'app-nav-bar',
+  templateUrl: './nav-bar.component.html',
+  styleUrls: ['./nav-bar.component.scss']
 })
-export class BienvenidoComponent implements OnInit {
+export class NavBarComponent implements OnInit {
 
   constructor(private router : Router) { }
 
   ngOnInit(): void {
   }
 
-  navigate(path:string) {
+  toggleMenu(path:string) {
     this.router.navigate([path]);
   }
-
 }

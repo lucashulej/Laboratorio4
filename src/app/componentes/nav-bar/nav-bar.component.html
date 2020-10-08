@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand" href="#"></a>
+
+  <button class="navbar-toggler navbar-toggler-right" type="button" aria-controls="appNavigation"
+    aria-expanded="!isCollapsed" aria-label="Toggle navigation" (click)="toggleMenu('busqueda')">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="appNavigation">
+    <div class="navbar-nav mr-auto">
+      <a (click)="toggleMenu('busqueda')" class="nav-item nav-link" routerLink="" routerLinkActive="active">Busqueda</a>
+      <a (click)="toggleMenu('peliculas/listado')" class="nav-item nav-link" routerLink="" routerLinkActive="active">Pelicula Listado</a>
+      <a (click)="toggleMenu('actor/listado')" class="nav-item nav-link" routerLink="" routerLinkActive="active">Actor Listado</a>
+      <!--
+      <div class="nav-item dropdown" ngbDropdown>
+        <a class="nav-link dropdown-toggle" id="dropdownSede" ngbDropdownToggle>Paginas</a>
+        <div class="dropdown-menu" ngbDropdownMenu aria-labelledby="dropdownSede">
+          <a class="dropdown-item" routerLink="/busqueda" routerLinkActive="active"
+            (click)="toggleMenu('busqueda')">Búsqueda</a>
+          <a class="dropdown-item" routerLink="/alta-pelicula" routerLinkActive="active"
+            (click)="toggleMenu('peliculas/listado')">Listado Peliculas</a>
+          <a class="dropdown-item" routerLinkActive="active" routerLink="/listado-peliculas"
+            (click)="toggleMenu('busqueda')">Listado</a>
+        </div>
+      </div>
+      -->
+    </div>
+  </div>
+</nav>

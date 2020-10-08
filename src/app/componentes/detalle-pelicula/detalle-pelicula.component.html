@@ -1,0 +1,14 @@
+<div class="col-md-4">
+  <div >
+    <h2>COMPONENTE DETALLE</h2>
+    <div *ngIf="pelicula">
+      <p>ID <strong>{{pelicula.id}}</strong></p>
+      <p>NOMBRE <strong>{{pelicula.nombre}}</strong></p>
+      <p>PUBLICO <strong>{{pelicula.cantidadPublico}}</strong></p>
+      <p>FECHA <strong>{{pelicula.fechaEstreno}}</strong></p>
+      <p>TIPO <strong>{{pelicula.tipo}}</strong></p>
+      <p><button class="btn btn-danger" *ngIf="Borrado == 1" (click)="borrar(pelicula)">BORRAR</button></p>
+      <!--<app-boton-entidad [entidad]="usuario"  (emitirBorrarUsuario)="tomarUsuarioParaBorrar($event)"></app-boton-entidad>-->
+  </div>
+  </div>
+</div>
