@@ -1,1 +1,30 @@
-<p>pelicula-alta works!</p>
+<div class="row">
+    <div class="col-md-8 order-md-1">
+      <h4 class="mb-3">Alta Pelicula</h4>
+      <form class="needs-validation" novalidate>
+        <div class="mb-3">
+          <label for="email">Nombre</label>
+          <input [(ngModel)]="pelicula.nombre" type="text" class="form-control" name="nombre" placeholder="Nombre">
+        </div>
+        <div class="mb-3">
+          <label for="email">Fecha De Estreno</label>
+          <input [(ngModel)]="pelicula.fechaEstreno" type="Date" name="fecha" class="form-control" id="email" placeholder="dd/mm/yyyy">
+        </div>
+        <div class="mb-3">
+          <label for="email">Cantidad Publico</label>
+          <input [(ngModel)]="pelicula.cantidadPublico" type="number"  name="publico" class="form-control" id="email">
+        </div>
+        <div class="mb-3">
+            <label for="country">Tipo Pelicula</label>
+            <select class="custom-select d-block w-100" id="country" [(ngModel)]="pelicula.tipo" name="tipo" required>
+              <option value="comedia" selected>Comedia</option>
+              <option value="amor">Amor</option>
+              <option value="terror">Terror</option>
+              <option value="otros">Otros</option>
+            </select>
+        </div>
+        <button class="btn btn-primary btn-lg btn-block" type="button" (click)="crearPelicula()">Crear Pelicula</button>
+      </form>
+    </div>
+  </div>
+  <app-tabla-actor (actorEmitido)="agarrarActor($event)" [listaActores]="listaActores"></app-tabla-actor>

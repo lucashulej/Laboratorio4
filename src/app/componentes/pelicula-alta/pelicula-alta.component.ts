@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Observable } from 'rxjs';
+import { AngularFireDatabase } from '@angular/fire/database';
+import { Actor} from '../../clases/actor';
+import { PeliculasService } from '../../servicios/peliculas.service';
+import { Pelicula } from 'src/app/clases/pelicula';
 @Component({
   selector: 'app-pelicula-alta',
   templateUrl: './pelicula-alta.component.html',
@@ -7,9 +11,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PeliculaAltaComponent implements OnInit {
 
-  constructor() { }
+  actores: Observable<any[]>;
+  listaActores: Actor[];
+  pelicula:Pelicula = new Pelicula();
+  constructor(private db : AngularFireDatabase, private peliculaService : PeliculasService) {}
 
   ngOnInit(): void {
+    this.actores = this.db.list('actores').valueChanges(); 
+    this.actores.subscribe((actores:any) => {
+      this.listaActores = actores;
+      console.log(this.listaActores);
+    }, error => console.log(error));
   }
 
+  agarrarActor(actor:Actor) {
+    console.log(actor);
+    if(!this.pelicula.actores.includes(actor.id)) {
+      this.pelicula.actores.push(actor.id);
+    }
+    console.log(this.pelicula.actores);
+  }
+
+  crearPelicula() {
+    if(this.pelicula.nombre != null && this.pelicula.fechaEstreno != null && this.pelicula.cantidadPublico != null && this.pelicula.actores.length != 0) {
+      this.pelicula.id = this.peliculaService.obtenerIdParaAlta();
+      console.log(this.pelicula);
+    }
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-tabla-actor',
@@ -8,10 +8,15 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TablaActorComponent implements OnInit {
 
   @Input() listaActores:[];
+  @Output() actorEmitido: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  emitirActor(actor) {
+    this.actorEmitido.emit(actor);
   }
 
 }

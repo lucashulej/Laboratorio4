@@ -19,5 +19,4 @@ export class DetallePeliculaComponent implements OnInit {
   borrar(pelicula) {
     this.borrarPelicula.emit(pelicula);
   }
-
 }

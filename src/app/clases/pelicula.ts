@@ -5,6 +5,6 @@ export class Pelicula {
     fechaEstreno:string;
     cantidadPublico:number;
     fotoPelicula:string;
-    activo:boolean;
-    actor:string;
+    activo:boolean = true;
+    actores:number[] = [];
 }

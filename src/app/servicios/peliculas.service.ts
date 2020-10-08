@@ -13,13 +13,31 @@ export class PeliculasService {
 
   peliculas: Observable<any[]>;
   listaPeliculas :any[];
-  
+  idAlta:number = 0;
   constructor(private db : AngularFireDatabase, private service:ApiService) {
     this.peliculas = this.db.list('peliculas').valueChanges(); 
     this.peliculas.subscribe((peliculas:any) => {
       this.listaPeliculas = peliculas;
-      console.log(this.listaPeliculas);
+      this.setearIdParaAlta();
     }, error => console.log(error));
+  }
+
+  setearIdParaAlta() {
+    let aux = 0;
+    for (const pelicula of this.listaPeliculas) {
+      if(aux == 0) {
+        this.idAlta = pelicula.id;
+        continue;
+      }
+      if(this.idAlta < pelicula.id) {
+        this.idAlta = pelicula.id;
+      }
+    }
+    this.listaPeliculas
+  }
+
+  obtenerIdParaAlta() {
+    return this.idAlta+1;
   }
 
   

@@ -31,11 +31,12 @@
       <span class="text-muted">LISTA ACTORES</span>
     </h4>
     <ul class="list-group mb-3">
-      <li class="list-group-item d-flex justify-content-between lh-condensed" *ngFor="let actor of listaActores">
-        <div>
+      <li class="list-group-item d-flex justify-content-between " *ngFor="let actor of listaActores">
+    
           <h6 class="my-0">{{actor.nombre}} {{actor.apellido}}</h6>
           <small class="text-muted">{{actor.sexo}}</small>
-        </div>
+          <button type="button" class="btn btn-info" (click)="emitirActor(actor)">Agregar</button>
+          <img style="width: 100px; height: 100px;" [src]="actor.foto"/>
       </li>
     </ul>
 </div>
