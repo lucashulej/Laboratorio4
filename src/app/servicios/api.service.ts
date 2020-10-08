@@ -9,8 +9,7 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   getData() {
-    return this.http.get('http://restcountries.eu/rest/v2');
-    //return this.http.get('https://api.mocki.io/v1/570c5e5c');
+    return this.http.get('https://restcountries.eu/rest/v2/region/europe');
   }
 
   cargarPeliculas() {

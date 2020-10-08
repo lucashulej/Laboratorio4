@@ -1,3 +1,5 @@
+import { Identifiers } from '@angular/compiler';
+
 export class Actor {
     id:number;
     nombre:string;
@@ -5,5 +7,5 @@ export class Actor {
     sexo:string;
     fechaDeNacimiento:string;
     foto:string;
-  
+    nacionalidad:string;
 }

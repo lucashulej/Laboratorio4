@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-8 order-md-1">
+      
+      <h4 class="mb-3">Alta Actor</h4>
+      <form class="needs-validation" novalidate>
+        <div class="mb-3">
+          <label for="email">Nombre</label>
+          <input [(ngModel)]="actor.nombre" type="text" class="form-control" name="nombre">
+        </div>
+        <div class="mb-3">
+            <label for="email">Apellido</label>
+            <input [(ngModel)]="actor.apellido" type="text" class="form-control" name="apellido">
+        </div>
+        <div class="mb-3">
+            <label for="email">Fecha Nacimiento</label>
+            <input [(ngModel)]="actor.fechaDeNacimiento" type="date" class="form-control" name="fecha">
+        </div>
+        <div class="mb-3">
+            <label for="country">Sexo</label>
+            <select class="custom-select d-block w-100" id="country" [(ngModel)]="actor.sexo" name="tipo" required>
+              <option value="masculino">masculino</option>
+              <option value="femenino">Femenino</option>
+            </select>
+        </div>
+        <button class="btn btn-primary btn-lg btn-block" type="button" (click)="crearActor()">Crear Actor</button>
+      </form>
+      
+    </div>
+  </div>
+<app-tabla-paises (paisEmitido)="agarrarPaisEmitido($event)"></app-tabla-paises>

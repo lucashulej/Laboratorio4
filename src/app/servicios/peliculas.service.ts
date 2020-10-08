@@ -40,6 +40,9 @@ export class PeliculasService {
     return this.idAlta+1;
   }
 
+  subirPelicula(pelicula:Pelicula) {
+    this.db.list('peliculas').set(pelicula.id.toString(),pelicula);
+  }
   
 /*
         let pelicula:Pelicula = new Pelicula();
