@@ -1,0 +1,12 @@
+<div class="col-md-4">
+    <div >
+      <h2>COMPONENTE Eliminar</h2>
+      <div *ngIf="actor">
+        <p>ID <strong>{{actor.id}}</strong></p>
+        <p>NOMBRE <strong>{{actor.nombre}}</strong></p>
+        <p>APELLIDO <strong>{{actor.apellido}}</strong></p>
+        <p><button class="btn btn-danger" (click)="borrar(actor)">BORRAR</button></p>
+    </div>
+    </div>
+  </div>
+  

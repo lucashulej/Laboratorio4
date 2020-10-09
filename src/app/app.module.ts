@@ -19,6 +19,9 @@ import { NavBarComponent } from './componentes/nav-bar/nav-bar.component';
 import { TablaActorComponent } from './componentes/tabla-actor/tabla-actor.component';
 import { TablaPaisesComponent } from './componentes/tabla-paises/tabla-paises.component';
 import { AltaActorComponent } from './componentes/alta-actor/alta-actor.component';
+import { DetalleActorComponent } from './componentes/detalle-actor/detalle-actor.component';
+import { EliminarActorComponent } from './componentes/eliminar-actor/eliminar-actor.component';
+import { ModificarActorComponent } from './componentes/modificar-actor/modificar-actor.component';
 
 var firebaseConfig = {
   apiKey: "AIzaSyC1LrNZxAXsDahHZIPzVMRhvU5A4voCf84",
@@ -43,7 +46,10 @@ var firebaseConfig = {
     NavBarComponent,
     TablaActorComponent,
     TablaPaisesComponent,
-    AltaActorComponent
+    AltaActorComponent,
+    DetalleActorComponent,
+    EliminarActorComponent,
+    ModificarActorComponent
   ],
   imports: [
     BrowserModule,

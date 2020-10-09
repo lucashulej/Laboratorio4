@@ -1,1 +1,6 @@
-<app-tabla-actor [listaActores]="listaActores"></app-tabla-actor>
+<app-tabla-actor (actorEmitido)="agarrarActorDetalle($event)" (actorEliminar)="agarrarActorEliminar($event)" (actorModificar)="agarrarActorModificar($event)" [listaActores]="listaActores"></app-tabla-actor>
+<div class="row">
+<app-detalle-actor [actor]="actorParaDetalle"></app-detalle-actor>
+<app-eliminar-actor [actor]="actorParaEliminar"></app-eliminar-actor>
+<app-modificar-actor [actor]="actorParaModificar"></app-modificar-actor>
+</div>

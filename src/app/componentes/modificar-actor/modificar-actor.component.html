@@ -1,0 +1,23 @@
+<div class="col-md-4">
+    <div>
+        <h2>COMPONENTE MODIFICAR</h2>
+        <div *ngIf="actor">
+            <label for="email">Nombre</label>
+            <input [(ngModel)]="nombre" type="text" class="form-control" name="nombre">
+            <label for="email">Apellido</label>
+            <input [(ngModel)]="apellido" type="text" class="form-control" name="apellido">
+            <div class="mb-3">
+                <label for="email">Fecha Nacimiento</label>
+                <input [(ngModel)]="fechaDeNacimiento" type="date" class="form-control" name="fecha">
+            </div>
+            <div class="mb-3">
+                <label for="country">Sexo</label>
+                <select class="custom-select d-block w-100" id="country" [(ngModel)]="sexo" name="tipo" required>
+                    <option value="masculino">masculino</option>
+                    <option value="femenino">Femenino</option>
+                </select>
+            </div>
+            <p><button class="btn btn-primary" (click)="modificar()">Modificar</button></p>
+        </div>
+    </div>
+</div>

@@ -1,42 +1,30 @@
-<!--<div class="jumbotron">
-    <h1 class="display-3">Listado Actores</h1>
-    <div class="container grid">
-        <div class="card mb-4 shadow-sm" style="width: 18rem" *ngFor="let actor of listaActores">
+<div class="jumbotron">
+  <h1 class="display-3">Listada Actores</h1>
+  <div class="container grid">
+    <div class="card mb-4 shadow-sm" style="width: 18rem" *ngFor="let actor of listaActores">
 
-            <img class="card-img-top" [src]="actor.foto" alt="Card image cap" />
-            <div class="card-body text-center">
-                <h5 class="card-title">{{ actor.nombre }}</h5>
-                
-                <button
-            class="btn btn-primary col-7"
-            type="button"
-            (click)="seleccionarEntidad(pelicula)"
-          >
-            MODIFICAR
-          </button>
-          <button
-            class="btn btn-primary col-7"
-            type="button"
-            (click)="seleccionarEntidad(pelicula)"
-          >
-            ELIMINAR
-          </button>
-            </div>
+      <img class="card-img-top" [src]="actor.foto" alt="Card image cap" />
+      <div class="card-body text-center">
+        <h5 class="card-title">{{actor.nombre}} {{actor.apellido}}</h5>
+        <button class="btn btn-primary col-7" type="button" (click)="emitirActor(actor)">
+          SELECCIONAR
+        </button>
+        -<button
+          class="btn btn-primary col-7"
+          type="button"
+          (click)="modificarActor(actor)"
+        >
+          MODIFICAR
+        </button>
+        <button
+          class="btn btn-primary col-7"
+          type="button"
+          (click)="eliminarActor(actor)"
+        >
+          ELIMINAR
+        </button>
+      </div>
 
-        </div>
     </div>
-</div>-->
-<div class="col-md-4 order-md-2 mb-4">
-    <h4 class="d-flex justify-content-between align-items-center mb-3">
-      <span class="text-muted">LISTA ACTORES</span>
-    </h4>
-    <ul class="list-group mb-3">
-      <li class="list-group-item d-flex justify-content-between " *ngFor="let actor of listaActores">
-    
-          <h6 class="my-0">{{actor.nombre}} {{actor.apellido}}</h6>
-          <small class="text-muted">{{actor.sexo}}</small>
-          <button type="button" class="btn btn-info" (click)="emitirActor(actor)">Agregar</button>
-          <img style="width: 100px; height: 100px;" [src]="actor.foto"/>
-      </li>
-    </ul>
+  </div>
 </div>

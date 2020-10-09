@@ -1,0 +1,14 @@
+<div class="col-md-4">
+    <div >
+      <h2>COMPONENTE DETALLE</h2>
+      <div *ngIf="actor">
+        <p>ID <strong>{{actor.id}}</strong></p>
+        <p>NOMBRE <strong>{{actor.nombre}}</strong></p>
+        <p>APELLIDO <strong>{{actor.apellido}}</strong></p>
+        <p>FECHA NACIMIENTO <strong>{{actor.fechaDeNacimiento}}</strong></p>
+        <p>NACIONALIDAD <strong>{{actor.nacionalidad}}</strong></p>
+        <p><button class="btn btn-primary" (click)="limpiar()">Limpiar</button></p>
+    </div>
+    </div>
+  </div>
+  

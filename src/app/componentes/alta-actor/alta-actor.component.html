@@ -1,6 +1,5 @@
 <div class="row">
-    <div class="col-md-8 order-md-1">
-      
+    <div class="col-md-6 order-md-1">
       <h4 class="mb-3">Alta Actor</h4>
       <form class="needs-validation" novalidate>
         <div class="mb-3">
@@ -22,9 +21,16 @@
               <option value="femenino">Femenino</option>
             </select>
         </div>
+        <div class="mb-3">
+          <label for="email">Nacionalidad</label>
+          <input [(ngModel)]="actor.nacionalidad" type="string" class="form-control" name="nacionalidad" disabled>
+      </div>
         <button class="btn btn-primary btn-lg btn-block" type="button" (click)="crearActor()">Crear Actor</button>
       </form>
       
     </div>
+    <div class="col-md-4 order-md-1">
+    <app-tabla-paises (paisEmitido)="agarrarPaisEmitido($event)"></app-tabla-paises>
   </div>
-<app-tabla-paises (paisEmitido)="agarrarPaisEmitido($event)"></app-tabla-paises>
+</div>
+

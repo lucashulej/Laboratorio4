@@ -40,4 +40,9 @@ export class ActorService {
   subirActor(actor:Actor) {
     this.db.list('actores').set(actor.id.toString(),actor);
   }
+
+  eliminarActor(actor:Actor) {
+    actor.activo = false;
+    this.db.list('actores').set(actor.id.toString(),actor);
+  }
 }

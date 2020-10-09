@@ -9,6 +9,8 @@ export class TablaActorComponent implements OnInit {
 
   @Input() listaActores:[];
   @Output() actorEmitido: EventEmitter<any> = new EventEmitter();
+  @Output() actorEliminar: EventEmitter<any> = new EventEmitter();
+  @Output() actorModificar: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
@@ -19,4 +21,11 @@ export class TablaActorComponent implements OnInit {
     this.actorEmitido.emit(actor);
   }
 
+  eliminarActor(actor) {
+    this.actorEliminar.emit(actor);
+  }
+
+  modificarActor(actor) {
+    this.actorModificar.emit(actor);
+  }
 }
